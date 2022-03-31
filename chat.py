@@ -25,7 +25,7 @@ model = NeuralNet(input_size, hidden_size, output_size).to(device)
 model.load_state_dict(model_state)
 model.eval()
 
-bot_name = "Sam"
+bot_name = "Alex Char"
 
 def get_response(msg):
     sentence = tokenize(msg)
@@ -45,15 +45,15 @@ def get_response(msg):
             if tag == intent["tag"]:
                 return random.choice(intent['responses'])
     
-    return "I do not understand..."
+    return "No entendí tu pregunta, ¿podrías intentar de nuevo?"
 
 
 if __name__ == "__main__":
-    print("Let's chat! (type 'quit' to exit)")
+    print("¡Hablemos! (Recuerda decir 'adios' para salir de la experiencia)")
     while True:
         # sentence = "do you use credit cards?"
-        sentence = input("You: ")
-        if sentence == "quit":
+        sentence = input("Tú: ")
+        if sentence == "adios":
             break
 
         resp = get_response(sentence)
