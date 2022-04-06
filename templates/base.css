@@ -4,13 +4,13 @@
     justify-content: center;
     margin-top: 1rem;
 }
-.audio{
+.botonAudio{
     width: 3rem;
     height: 3rem;
     border-color: transparent;
     background-color: white;
 }
-.audio:hover{
+.botonAudio:hover{
     background-color: wheat;
 }
 .imagenAudio{
@@ -24,4 +24,13 @@
     align-items: center;
     justify-content: center;
 
+}
+.audio{
+    width:40rem; 
+    height:0rem;
+    border-color: transparent;
+}
+.video{
+    width:100%; 
+    height:0rem;
 }
