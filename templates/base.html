@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-
+<link href="base.css" rel="stylesheet" type="text/css">
 <head>
+  
     <meta charset="UTF-8">
     <title>CharBot</title>
 </head>
@@ -30,7 +31,11 @@
         <div class="chatbox__button">
             <button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" /></button>
         </div>
-    </div>
+        <div class="respuesta">
+           <button class="audio"  id="botonAudio" > <img src="https://cdn-icons-png.flaticon.com/512/25/25695.png" class="imagenAudio"></button>
+            <audio src="mi-archivo-de-audio.mp3"></audio>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/GbRMVqssPzE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </div>
+        </div>
 </div>
 
     <script>
