@@ -20,5 +20,8 @@
 .respuesta{
     display:flex;
     margin-top: 1.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 
 }
