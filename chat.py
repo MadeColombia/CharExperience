@@ -1,6 +1,7 @@
 import random
 import json
-
+import sys
+from PyQt5.QtWidgets import QApplication, QWidget, QLabel
 import torch
 
 from model import NeuralNet
@@ -8,7 +9,7 @@ from nltk_utils import bag_of_words, tokenize
 
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-with open('intents.json', 'r') as json_data:
+with open('intents.json', 'r', encoding='utf-8') as json_data:
     intents = json.load(json_data)
 
 FILE = "data.pth"
@@ -26,6 +27,15 @@ model.load_state_dict(model_state)
 model.eval()
 
 bot_name = "Alex Char"
+
+class Hyperlinklabel(QLabel):
+    def __init__(self, parent=None):
+         super().__init__()
+         self.setStylesheet('font-size: 35px')
+         self.setOpenExternallinks(True)
+         self.setparent(parnet)
+
+       
 
 def get_response(msg):
     sentence = tokenize(msg)
@@ -49,13 +59,24 @@ def get_response(msg):
 
 
 if __name__ == "__main__":
-    print("¡Hablemos! (Recuerda decir 'adios' para salir de la experiencia)")
+    print("Hola!, soy Alex Char, ¡Hablemos!")
+    # Recuerda decir 'salir' para salir de la experiencia
     while True:
-        # sentence = "do you use credit cards?"
+        #sentence = "do you use credit cards?"
         sentence = input("Tú: ")
-        if sentence == "adios":
+        #term = "message" #palabra que buscamos
+        #output = raw_output() #read input from user
+        #words = output.split() #split the sentence into individual words
+        if sentence == "salir":
             break
+
+        #elif  term in words:
+            #labell = HyperlinkLabel(self)
+            #labell.setText(linkTemplate.format('https://Google.com', 'Google.com'))
+            #lab = get_response(labell)
+            #print(labell)      
 
         resp = get_response(sentence)
         print(resp)
+        #print(responsed)
 
