@@ -1,0 +1,100 @@
+html,
+body {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+  border: none;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Ubuntu;
+}
+.img-char {
+  position: absolute;
+  left: 2.84%;
+  right: 48.19%;
+  top: 26.27%;
+  bottom: -21.26%;
+  width: 45rem;
+  height: 45rem;
+  z-index: 2;
+  background-repeat: no-repeat round;
+  background: url(images/char.png);
+}
+.bg {
+  position: fixed;
+  width: 60%;
+  height: 100%;
+  margin: 0;
+  border: none;
+  padding: 0;
+  z-index: -1;
+  background: url(images/bgChar.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.info {
+  position: absolute;
+  width: 515px;
+  height: 510px;
+  right: 100px;
+  top: 291px;
+}
+.title {
+  position: relative;
+  width: 100%;
+  height: 110px;
+  display: flex;
+  align-items: stretch;
+}
+.subtitle {
+  float: right;
+}
+.subT {
+  font-size: 36px;
+  margin-top: 10px;
+  padding: 0;
+}
+.textP {
+  float: right;
+}
+.infoP {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 44px;
+  /* or 111% */
+
+  text-align: right;
+  letter-spacing: -0.035em;
+
+  /* Gray Text */
+
+  color: #949ba5;
+}
+.btnLog {
+  width: 50%;
+  float: right;
+  margin: 0;
+}
+.iniciar {
+  float: right;
+  padding: 1rem 2rem 1rem 2rem;
+  border-radius: 10px;
+  background-color: #212226;
+  color: white;
+  font-family: Ubuntu;
+  border: 0;
+  box-shadow: none;
+}
+.iniciar:hover {
+  background-color: #3c3e46;
+}
+.img-logo {
+  position: relative;
+  width: 100%;
+}
