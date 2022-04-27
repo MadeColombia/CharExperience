@@ -68,6 +68,7 @@ if __name__ == "__main__":
         #output = raw_output() #read input from user
         #words = output.split() #split the sentence into individual words
         if sentence == "salir":
+            print("Un gusto conocerte!")
             break
 
         #elif  term in words:
