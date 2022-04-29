@@ -6,7 +6,7 @@ class Chatbox{
             sendButton: document.querySelector('.send__button')
         }
 
-        this.state = false;
+        this.state = true;
         this.messages = [];
     }
 
