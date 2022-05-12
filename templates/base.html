@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<link href="base.css" rel="stylesheet" type="text/css">
+<head>
+  
+    <meta charset="UTF-8">
+    <title>CharBot</title>
+</head>
+<body>
+<div class="container">
+    <div class="chatbox">
+        <div class="chatbox__support">
+            <div class="chatbox__header">
+                <div class="chatbox__image--header">
+                    <img src="https://img.icons8.com/color/48/000000/circled-user-female-skin-type-5--v1.png" alt="image">
+                </div>
+                <div class="chatbox__content--header">
+                    <h4 class="chatbox__heading--header">Charbot</h4>
+                    <p class="chatbox__description--header">Hola!. Mi nombre es alex char, ¿Que te gustaría saber de mí?</p>
+                </div>
+            </div>
+            <div class="chatbox__messages">
+                <div></div>
+            </div>
+            <div class="chatbox__footer">
+                <input type="text" placeholder="Write a message...">
+                <button class="chatbox__send--footer send__button">Envíar</button>
+            </div>
+        </div>
+        <div class="chatbox__button">
+            <button><img src="{{ url_for('static', filename='images/chatbox-icon.svg') }}" /></button>
+        </div>
+        <div class="respuesta">
+                <button class="botonAudio"  id="botonAudio" onclick="abrirAudio()"> <img src="https://cdn-icons-png.flaticon.com/512/25/25695.png" class="imagenAudio"> </button>
+                <button class="botonVideo"  id="botonVideo" onclick="abrirVideo()"> Abrir Video </button>                
+                    <iframe class="audio" id="audio" src="https://open.spotify.com/embed/episode/69SWh9varbVqRuAvorOhqZ?utm_source=generator"  allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+                    <iframe class="video" id="video" src="https://www.youtube.com/embed/GbRMVqssPzE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>        
+</div>
+
+    <script>       
+        var clic= 1;
+        var clic1=1;
+        function abrirVideo(){             
+            if(clic==1){               
+                document.getElementById("video").style.height="30rem";
+                clic = clic + 1;
+            }     else{                     
+                        document.getElementById("video").style.height="0rem";
+                        clic = 1;
+                    }   
+        }      
+
+        function abrirAudio(){ 
+           
+            if(clic1==1){
+               
+                document.getElementById("audio").style.height="10rem";
+                clic1 = clic1 + 1;
+            } else{                  
+                    document.getElementById("audio").style.height="0rem";
+                    clic1 = 1;
+                }   
+        }
+        $SCRIPT_ROOT = "{{ request.script_root|tojson }}";
+    </script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+
+</body>
+</html>
