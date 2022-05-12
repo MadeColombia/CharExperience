@@ -13,7 +13,7 @@ class Chatbox {
     display() {
         const {openButton, chatBox, sendButton} = this.args;
 
-        openButton.addEventListener('click', () => this.toggleState(chatBox))
+        //openButton.addEventListener('click', () => this.toggleState(chatBox))
 
         sendButton.addEventListener('click', () => this.onSendButton(chatBox))
 
@@ -42,9 +42,10 @@ class Chatbox {
         if (text1 === "") {
             return;
         }
-
+        
         let msg1 = { name: "User", message: text1 }
         this.messages.push(msg1);
+        
 
         fetch('http://127.0.0.1:5000/predict', {
             method: 'POST',
@@ -56,11 +57,11 @@ class Chatbox {
           })
           .then(r => r.json())
           .then(r => {
-            let msg2 = { name: "Char", message: r.answer };
+            let msg2 = { name: "Char", message: r.answer[1] };
             this.messages.push(msg2);
             this.updateChatText(chatbox)
             textField.value = ''
-
+            console.log(r.answer[0]);
         }).catch((error) => {
             console.error('Error:', error);
             this.updateChatText(chatbox)

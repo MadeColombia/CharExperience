@@ -53,7 +53,7 @@ def get_response(msg):
     if prob.item() > 0.75:
         for intent in intents['intents']:
             if tag == intent["tag"]:
-                return random.choice(intent['responses'])
+                return tag, random.choice(intent['responses'])
     
     return "No entendí tu pregunta, ¿podrías intentar de nuevo?"
 
