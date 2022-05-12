@@ -24,8 +24,8 @@
                 <div></div>
             </div>
             <div class="chatbox__footer">
-                <input type="text" placeholder="Write a message...">
-                <button class="chatbox__send--footer send__button">Envíar</button>
+                <input type="text" id="texto" placeholder="Write a message...">
+                <button class="chatbox__send--footer send__button"  onclick="actualizarVideo()">Envíar</button>
             </div>
         </div>
         <div class="chatbox__button">
@@ -63,6 +63,44 @@
                     clic1 = 1;
                 }   
         }
+
+        var nombreVideo="" ;
+        document.getElementById("botonVideo").style.display="none";
+        document.getElementById("botonAudio").style.display="none";
+        
+
+        function actualizarVideo()
+        {
+            nombreVideo= document.getElementById("texto").value;
+            document.getElementById("texto").value="";
+            document.getElementById("audio").style.height="0rem";
+            document.getElementById("video").style.height="0rem";
+            if (nombreVideo === "tag1") {
+                document.getElementById("botonVideo").style.display="flex";
+                document.getElementById("botonAudio").style.display="flex";
+                document.getElementById("video").src="https://www.youtube.com/embed/4H2X0qOchE8";
+                document.getElementById("audio").src= "https://open.spotify.com/embed/episode/5hLojXuR2McRb0qOePbmDp?utm_source=generator"
+            } else if (nombreVideo === "tag2") {  
+                document.getElementById("botonAudio").style.display="flex";
+                document.getElementById("botonVideo").style.display="none";                  
+                document.getElementById("audio").src= "https://open.spotify.com/embed/episode/4NwUIcIgdcVmD2CtexC5Mb?utm_source=generator"
+            } else if (nombreVideo === "tag3") {
+                document.getElementById("botonVideo").style.display="flex";
+                document.getElementById("botonAudio").style.display="none";
+                document.getElementById("video").src="https://www.youtube.com/embed/SNG06Lm426s";
+            } else if (nombreVideo === "tag4") {
+                document.getElementById("botonVideo").style.display="flex";
+                document.getElementById("botonAudio").style.display="flex";
+                document.getElementById("video").src="https://www.youtube.com/embed/P_WHJ3vrIes";
+                document.getElementById("audio").src= "https://open.spotify.com/embed/episode/7BnqVMnmMyPSufgRR25Y35?utm_source=generator";
+            } else if (nombreVideo === "tag5") {
+               
+            } else {
+                document.getElementById("botonVideo").style.display="none";
+                document.getElementById("botonAudio").style.display="none";
+            }
+        }
+
         $SCRIPT_ROOT = "{{ request.script_root|tojson }}";
     </script>
     <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
