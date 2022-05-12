@@ -24,8 +24,8 @@
                 <div></div>
             </div>
             <div class="chatbox__footer">
-                <input type="text" placeholder="Write a message...">
-                <button class="chatbox__send--footer send__button">Envíar</button>
+                <input type="text" id="texto" placeholder="Write a message...">
+                <button class="chatbox__send--footer send__button"  onclick="actualizarVideo()">Envíar</button>
             </div>
         </div>
         <div class="chatbox__button">
@@ -63,6 +63,31 @@
                     clic1 = 1;
                 }   
         }
+
+        var nombreVideo="" ;
+        
+
+        function actualizarVideo()
+        {
+            nombreVideo= document.getElementById("texto").value;
+            document.getElementById("texto").value="";
+
+            console.log(""+nombreVideo);
+            if (nombreVideo === "tag1") {
+                document.getElementById("video").src="https://www.youtube.com/embed/7GDp7S1HgSk";
+            } else if (nombreVideo === "tag2") {
+                
+            } else if (nombreVideo === "tag3") {
+         
+            } else if (nombreVideo === "tag4") {
+               
+            } else if (nombreVideo === "tag5") {
+               
+            } else {
+                console.log("No detecto tag");
+            }
+        }
+
         $SCRIPT_ROOT = "{{ request.script_root|tojson }}";
     </script>
     <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
