@@ -217,7 +217,6 @@ html {
 
 /*Media Buttons*/
 .char-media {
-  position: absolute;
   top: 300px;
   right: 200px;
   height: 600px;
@@ -273,3 +272,25 @@ html {
   transform: rotate(-90deg);
   z-index: -1;
 }
+.mediosDigitales{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: auto;
+  margin-top: 20rem;
+  margin-left: 57rem;
+  
+}
+.respuesta{
+  display:flex;
+  margin-top: 1.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 44rem;
+
+}
+.video{
+  width:100%; 
+  height:0rem;
+  }

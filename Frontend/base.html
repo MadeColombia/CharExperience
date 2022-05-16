@@ -1,65 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css" />
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Chatbot</title>
-  <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">
+  <link rel="stylesheet" type="text/css"
+    href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
   <link rel="stylesheet" type="text/css"
-    href="https://cdn.jsdelivr.net/gh/vaakash/socializer@2f749eb/css/socializer.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+    href="https://cdn.jsdelivr.net/gh/vaakash/socializer@2f749eb/css/socializer.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" />
 </head>
 
 <body>
-
   <div class="chatbox">
     <div class="chatbox__support">
       <div class="chatbox__header">
         <div class="chatbox__image--header">
-          <img src="https://img.icons8.com/color/48/000000/circled-user-male-skin-type-5--v1.png" alt="image">
+          <img src="https://img.icons8.com/color/48/000000/circled-user-male-skin-type-5--v1.png" alt="image" />
         </div>
         <div class="chatbox__content--header">
           <h4 class="chatbox__heading--header">CharBot</h4>
-          <p class="chatbox__description--header">Hola! Mi nombre es Alex Char, bienvenido a la experiencia!</p>
+          <p class="chatbox__description--header">
+            Hola! Mi nombre es Alex Char, bienvenido a la experiencia!
+          </p>
         </div>
       </div>
       <div class="chatbox__messages">
         <div></div>
       </div>
       <div class="chatbox__footer">
-        <input type="text" placeholder="Escribe un mensaje...">
-        <button class="chatbox__send--footer send__button"><img src="images/Send Button.svg" alt=""
-            class="enviar"></button>
+        <input type="text" placeholder="Escribe un mensaje..." />
+        <button class="chatbox__send--footer send__button">
+          <img src="images/Send Button.svg" alt="" class="enviar"/>
+        </button>
       </div>
     </div>
   </div>
-  <div class="char-media">
-    <div class="char-img"></div><br>
-    <div class="msj-logo">¡Comparte la experiencia <br>con mas personas!</div>
-    <br>
-    <br>
-    <div class="MediaBtn">
-      <div class="socializer a sr-48px sr-circle sr-zoom sr-icon-white sr-bg-dark sr-pad"><span class="sr-facebook"><a
-            href="https://www.facebook.com/share.php?u=CharBot.com&amp;t=CharExperience" target="_blank"
-            title="Facebook"><i class="fab fa-facebook-f"></i></a></span><span class="sr-twitter"><a
-            href="https://twitter.com/intent/tweet?text=CharExperience%20-%20CharBot.com%20" target="_blank"
-            title="Twitter"><i class="fab fa-twitter"></i></a></span><span class="sr-whatsapp"><a
-            href="https://api.whatsapp.com/send?text=CharExperience%20CharBot.com" target="_blank" title="WhatsApp"><i
-              class="fab fa-whatsapp"></i></a></span><span class="sr-email"><a
-            href="mailto:?subject=CharExperience&amp;body=%20-%20CharBot.com" target="_blank" title="Email"><i
-              class="fa fa-envelope"></i></a></span></div>
+  <div class="mediosDigitales">
+    <div class="respuesta">
+      <iframe class="video" id="video" src="https://www.youtube.com/embed/GbRMVqssPzE" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+    <div class="char-media" id="char-media">
+      <div class="char-img"></div>
+      <br />
+      <div class="msj-logo">
+        ¡Comparte la experiencia <br />con mas personas!
+      </div>
+      <br />
+      <br />
+
+      <div class="MediaBtn">
+        <div class="socializer a sr-48px sr-circle sr-zoom sr-icon-white sr-bg-dark sr-pad">
+          <span class="sr-facebook"><a href="https://www.facebook.com/share.php?u=CharBot.com&amp;t=CharExperience"
+              target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a></span><span class="sr-twitter"><a
+              href="https://twitter.com/intent/tweet?text=CharExperience%20-%20CharBot.com%20" target="_blank"
+              title="Twitter"><i class="fab fa-twitter"></i></a></span><span class="sr-whatsapp"><a
+              href="https://api.whatsapp.com/send?text=CharExperience%20CharBot.com" target="_blank" title="WhatsApp"><i
+                class="fab fa-whatsapp"></i></a></span><span class="sr-email"><a
+              href="mailto:?subject=CharExperience&amp;body=%20-%20CharBot.com" target="_blank" title="Email"><i
+                class="fa fa-envelope"></i></a></span>
+        </div>
+      </div>
     </div>
   </div>
-
 
   <div class="bg1"></div>
   <div class="bg2"></div>
   <script src="./app.js"></script>
-
-
+  
 </body>
 
 </html>
