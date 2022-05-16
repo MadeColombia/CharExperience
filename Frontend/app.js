@@ -89,30 +89,37 @@ class Chatbox {
 
 document.getElementById("char-media").style.display = "flex";
 document.getElementById("video").style.display = "none";
-function actualizarVideo() {
-    // var nombreVideo = console.readline();
-    var nombreVideo = "pregunta 1";
+function actualizarVideo(nombreVideo) {  
+    document.getElementById("video").style.height="0rem";
+    setTimeout(() => {    
     if (nombreVideo === "pregunta 2") {
+        document.getElementById("video").style.height="25rem";
         document.getElementById("video").style.display = "flex";
-        document.getElementById("char-media").style.height = "0px"
+        document.getElementById("char-media").style.display = "none";
         document.getElementById("video").src = "https://www.youtube.com/embed/wJoTjpf6lF0?start=18";
     }
     else if (nombreVideo === "pregunta 1") {
+        document.getElementById("video").style.height="25rem";
         document.getElementById("video").style.display = "flex";
         document.getElementById("char-media").style.display = "none";
         document.getElementById("video").src = "https://www.youtube.com/embed/0Uh0fzVrZtA";
     } else if (nombreVideo === "pregunta 5") {
+        document.getElementById("video").style.height="25rem";
         document.getElementById("video").style.display = "flex";
-        document.getElementById("char-media").style.height = "0px"
+        document.getElementById("char-media").style.display = "none";
         document.getElementById("video").src = "https://www.youtube.com/embed/wJoTjpf6lF0?start=128";
     } else if (nombreVideo === "pregunta 6") {
+        document.getElementById("video").style.height="25rem";
         document.getElementById("video").style.display = "flex";
-        document.getElementById("char-media").style.height = "0px"
+        document.getElementById("char-media").style.display = "none";
         document.getElementById("video").src = "https://www.youtube.com/embed/wJoTjpf6lF0?start=24";
     } else {
+        document.getElementById("video").style.height="0rem";
         document.getElementById("video").style.display = "none";
+        document.getElementById("video").src="";
         document.getElementById("char-media").style.display = "flex";
     }
+}, 1000);
 }
 
 

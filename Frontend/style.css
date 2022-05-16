@@ -287,9 +287,10 @@ html {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  width: 44rem;
 
 }
 .video{
   width:100%; 
-  height:25rem;
+  height:0rem;
   }
