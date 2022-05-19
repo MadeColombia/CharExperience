@@ -12,6 +12,8 @@ body {
   left: 0;
   right: 0;
   margin: 0;
+  margin-left: 10rem;
+  margin-top:-7rem;
   overflow: hidden;
   border: none;
   padding: 0;
@@ -37,8 +39,8 @@ html {
 =============== */
 .chatbox {
   position: absolute;
-  top: 300px;
-  left: 200px;
+  top: 220px;
+  left: 350px;
 }
 
 /* CONTENT IS CLOSE */
@@ -89,11 +91,39 @@ html {
   flex-direction: column-reverse;
 }
 
+/*----------------------------------*/
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: white; 
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background: white; 
+}
+
+/*----------------------------------*/
+
 .messages__item {
   background: orange;
   max-width: 60.6%;
   width: fit-content;
 }
+
+
 
 .messages__item--operator {
   margin-left: auto;

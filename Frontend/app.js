@@ -58,10 +58,15 @@ class Chatbox {
             .then(r => r.json())
             .then(r => {
                 let msg2 = { name: "Char", message: r.answer[1] };
+                if(r.answer[0] == 'N')
+                {
+                    msg2 = { name: "Char", message: "No entendí tu pregunta, ¿podrías intentar de nuevo?"};
+
+                }
                 this.messages.push(msg2);
                 this.updateChatText(chatbox)
                 textField.value = ''
-                // console.log(r.answer[0]);
+                //console.log(r.answer[0]);
                 actualizarVideo(r.answer[0]);
             }).catch((error) => {
                 console.error('Error:', error);
